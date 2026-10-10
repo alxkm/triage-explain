@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "triage-explain: grounded operator explanations for telemetry triage with local language models"
+authors:
+  - family-names: Klymenko
+    given-names: Oleksandr
+    orcid: "https://orcid.org/0009-0000-5924-3697"
+version: 0.1.0
+date-released: 2026-10-10
+license: MIT
+repository-code: "https://github.com/alxkm/triage-explain"
+keywords:
+  - large language models
+  - grounding
+  - explanation
+  - telemetry
+  - fault attribution
+  - industrial monitoring
