@@ -19,7 +19,9 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-R = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "results"
+ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
+TITLES = "--titles" in sys.argv  # in-figure titles and notes; off for the paper, where the caption carries them
+R = Path(ARGS[0]) if ARGS else ROOT / "results"
 OUT = R / "figures"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -82,7 +84,8 @@ def specific(textv, i):
 
 def hbars(title, axis_label, rows, xmax, fmt, note=None, ref=None):
     """rows: [(label, [(value, lo, hi, color, series_name)])]; one group per row, bars stacked vertically."""
-    left, right, top = 200, 40, 64
+    left, right, top = 200, 40, (64 if TITLES else 40)
+    note = note if TITLES else None
     per = max(len(r[1]) for r in rows)
     bar_h, gap_in, gap_out = 13, 2, 14
     group_h = per * bar_h + (per - 1) * gap_in
@@ -90,7 +93,7 @@ def hbars(title, axis_label, rows, xmax, fmt, note=None, ref=None):
     w, h = 760, top + plot_h + 44 + (18 if note else 0)
     pw = w - left - right
     sx = lambda v: left + pw * v / xmax
-    b = [text(left, 22, title, size=14, weight="bold")]
+    b = [text(left, 22, title, size=14, weight="bold")] if TITLES else []
     series = []
     for _, bars in rows:
         for v in bars:
@@ -98,8 +101,8 @@ def hbars(title, axis_label, rows, xmax, fmt, note=None, ref=None):
                 series.append((v[4], v[3]))
     lx = left
     for name, col in series:  # legend, above the plot
-        b.append(f"<rect x='{lx}' y='36' width='10' height='10' rx='2' fill='{col}'/>")
-        b.append(text(lx + 14, 45, name, fill=INK2))
+        b.append(f"<rect x='{lx}' y='{top - 28}' width='10' height='10' rx='2' fill='{col}'/>")
+        b.append(text(lx + 14, top - 19, name, fill=INK2))
         lx += 24 + 6.2 * len(name)
     b.append(f"<rect x='{left}' y='{top}' width='{pw}' height='{plot_h}' fill='none' stroke='{FRAME}'/>")
     for k in range(0, 6):
@@ -134,7 +137,7 @@ def hbars(title, axis_label, rows, xmax, fmt, note=None, ref=None):
 
 def fig1():
     w, h = 760, 312
-    b = [text(20, 22, "Detectors decide, the language model explains, the rules admit", size=14, weight="bold")]
+    b = [text(20, 22, "Detectors decide, the language model explains, the rules admit", size=14, weight="bold")] if TITLES else []
 
     def box(x, y, bw, bh, title, lines, stroke=FRAME, fill="white"):
         out = [f"<rect x='{x}' y='{y}' width='{bw}' height='{bh}' rx='6' fill='{fill}' stroke='{stroke}' stroke-width='1.2'/>",
@@ -168,6 +171,8 @@ def fig1():
     b.append(f"<path d='M620 284 L276 284 L276 268' fill='none' stroke='{INK}' stroke-width='1.2' stroke-dasharray='4 3' marker-end='url(#a)'/>")
     b.append(text(448, 280, "fail, or model call fails", anchor="middle", size=10, fill=INK2))
     b += arrow(356, 228, 390, 228)
+    if not TITLES:
+        return svg(w, h - 44, ["<g transform='translate(0,-44)'>"] + b + ["</g>"])
     return svg(w, h, b)
 
 
