@@ -1,4 +1,4 @@
-run: 2026-10-06T12:49:39.713359200+02:00[Europe/Berlin]
+run: 2026-10-18T18:16:50.463528400+02:00[Europe/Berlin]
 base: http://localhost:11434/v1
 ports: []
 policy: Policy[maxAttempts=3, responseTimeout=PT2M, firstEventTimeout=PT1M, idleTimeout=PT30S, totalBudget=PT5M, backoffBase=PT0.5S, backoffCap=PT8S, retryAfterCap=PT30S, jitter=0.5]

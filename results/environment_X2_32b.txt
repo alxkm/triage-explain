@@ -1,0 +1,5 @@
+run: 2026-10-18T17:14:51.838218600+02:00[Europe/Berlin]
+base: http://localhost:11434/v1
+ports: [spring-ai:llama3.2, spring-ai:qwen2.5:7b, spring-ai:mistral:7b, spring-ai:qwen2.5:32b]
+policy: Policy[maxAttempts=3, responseTimeout=PT2M, firstEventTimeout=PT1M, idleTimeout=PT30S, totalBudget=PT5M, backoffBase=PT0.5S, backoffCap=PT8S, retryAfterCap=PT30S, jitter=0.5]
+incidents: 260

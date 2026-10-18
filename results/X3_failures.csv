@@ -1,41 +1,41 @@
 port,scenario,id,source,rejected,millis,attempts
-spring-ai/test-model,"503 on every attempt",tank-2043-0,template,"R0-call:InternalServerException",2052,3
-spring-ai/test-model,"503 on every attempt",thermal-2049-17,template,"R0-call:InternalServerException",1274,3
-spring-ai/test-model,"503 on every attempt",tank-2025-0,template,"R0-call:InternalServerException",1436,3
-spring-ai/test-model,"503 on every attempt",thermal-2017-21,template,"R0-call:InternalServerException",1141,3
-spring-ai/test-model,"503 on every attempt",thermal-2025-0,template,"R0-call:InternalServerException",1037,3
-spring-ai/test-model,"429 Retry-After 60 s",tank-2043-0,template,"R0-call:RateLimitException",3,1
-spring-ai/test-model,"429 Retry-After 60 s",thermal-2049-17,template,"R0-call:RateLimitException",2,1
-spring-ai/test-model,"429 Retry-After 60 s",tank-2025-0,template,"R0-call:RateLimitException",2,1
-spring-ai/test-model,"429 Retry-After 60 s",thermal-2017-21,template,"R0-call:RateLimitException",3,1
-spring-ai/test-model,"429 Retry-After 60 s",thermal-2025-0,template,"R0-call:RateLimitException",3,1
-spring-ai/test-model,"no response for 70 s",tank-2043-0,template,"R0-call:no-response",10025,3
-spring-ai/test-model,"no response for 70 s",thermal-2049-17,template,"R0-call:no-response",10274,3
-spring-ai/test-model,"no response for 70 s",tank-2025-0,template,"R0-call:no-response",10245,3
-spring-ai/test-model,"no response for 70 s",thermal-2017-21,template,"R0-call:no-response",10069,3
-spring-ai/test-model,"no response for 70 s",thermal-2025-0,template,"R0-call:no-response",10291,3
-spring-ai/test-model,"200 with a body that is not JSON",tank-2043-0,template,"R0-call:malformed-response",5,1
-spring-ai/test-model,"200 with a body that is not JSON",thermal-2049-17,template,"R0-call:malformed-response",2,1
-spring-ai/test-model,"200 with a body that is not JSON",tank-2025-0,template,"R0-call:malformed-response",2,1
-spring-ai/test-model,"200 with a body that is not JSON",thermal-2017-21,template,"R0-call:malformed-response",1,1
-spring-ai/test-model,"200 with a body that is not JSON",thermal-2025-0,template,"R0-call:malformed-response",2,1
-langchain4j/test-model,"503 on every attempt",tank-2043-0,template,"R0-call:InternalServerException",1311,3
-langchain4j/test-model,"503 on every attempt",thermal-2049-17,template,"R0-call:InternalServerException",1273,3
-langchain4j/test-model,"503 on every attempt",tank-2025-0,template,"R0-call:InternalServerException",1436,3
-langchain4j/test-model,"503 on every attempt",thermal-2017-21,template,"R0-call:InternalServerException",1140,3
-langchain4j/test-model,"503 on every attempt",thermal-2025-0,template,"R0-call:InternalServerException",1042,3
-langchain4j/test-model,"429 Retry-After 60 s",tank-2043-0,template,"R0-call:RateLimitException",2,1
-langchain4j/test-model,"429 Retry-After 60 s",thermal-2049-17,template,"R0-call:RateLimitException",2,1
-langchain4j/test-model,"429 Retry-After 60 s",tank-2025-0,template,"R0-call:RateLimitException",2,1
-langchain4j/test-model,"429 Retry-After 60 s",thermal-2017-21,template,"R0-call:RateLimitException",1,1
-langchain4j/test-model,"429 Retry-After 60 s",thermal-2025-0,template,"R0-call:RateLimitException",1,1
-langchain4j/test-model,"no response for 70 s",tank-2043-0,template,"R0-call:no-response",10037,3
-langchain4j/test-model,"no response for 70 s",thermal-2049-17,template,"R0-call:no-response",10246,3
-langchain4j/test-model,"no response for 70 s",tank-2025-0,template,"R0-call:no-response",10250,3
-langchain4j/test-model,"no response for 70 s",thermal-2017-21,template,"R0-call:no-response",10064,3
-langchain4j/test-model,"no response for 70 s",thermal-2025-0,template,"R0-call:no-response",10292,3
-langchain4j/test-model,"200 with a body that is not JSON",tank-2043-0,template,"R0-call:malformed-response",3,1
-langchain4j/test-model,"200 with a body that is not JSON",thermal-2049-17,template,"R0-call:malformed-response",2,1
-langchain4j/test-model,"200 with a body that is not JSON",tank-2025-0,template,"R0-call:malformed-response",1,1
-langchain4j/test-model,"200 with a body that is not JSON",thermal-2017-21,template,"R0-call:malformed-response",1,1
-langchain4j/test-model,"200 with a body that is not JSON",thermal-2025-0,template,"R0-call:malformed-response",1,1
+spring-ai/test-model,"503 on every attempt",thermal-2031-20,template,"R0-call:InternalServerException",2079,3
+spring-ai/test-model,"503 on every attempt",thermal-2019-13,template,"R0-call:InternalServerException",1273,3
+spring-ai/test-model,"503 on every attempt",tank-2007-16,template,"R0-call:InternalServerException",1436,3
+spring-ai/test-model,"503 on every attempt",thermal-2013-0,template,"R0-call:InternalServerException",1140,3
+spring-ai/test-model,"503 on every attempt",thermal-2005-1,template,"R0-call:InternalServerException",1034,3
+spring-ai/test-model,"429 Retry-After 60 s",thermal-2031-20,template,"R0-call:RateLimitException",4,1
+spring-ai/test-model,"429 Retry-After 60 s",thermal-2019-13,template,"R0-call:RateLimitException",3,1
+spring-ai/test-model,"429 Retry-After 60 s",tank-2007-16,template,"R0-call:RateLimitException",2,1
+spring-ai/test-model,"429 Retry-After 60 s",thermal-2013-0,template,"R0-call:RateLimitException",2,1
+spring-ai/test-model,"429 Retry-After 60 s",thermal-2005-1,template,"R0-call:RateLimitException",2,1
+spring-ai/test-model,"no response for 70 s",thermal-2031-20,template,"R0-call:no-response",10034,3
+spring-ai/test-model,"no response for 70 s",thermal-2019-13,template,"R0-call:no-response",10273,3
+spring-ai/test-model,"no response for 70 s",tank-2007-16,template,"R0-call:no-response",10250,3
+spring-ai/test-model,"no response for 70 s",thermal-2013-0,template,"R0-call:no-response",10085,3
+spring-ai/test-model,"no response for 70 s",thermal-2005-1,template,"R0-call:no-response",10306,3
+spring-ai/test-model,"200 with a body that is not JSON",thermal-2031-20,template,"R0-call:malformed-response",5,1
+spring-ai/test-model,"200 with a body that is not JSON",thermal-2019-13,template,"R0-call:malformed-response",2,1
+spring-ai/test-model,"200 with a body that is not JSON",tank-2007-16,template,"R0-call:malformed-response",2,1
+spring-ai/test-model,"200 with a body that is not JSON",thermal-2013-0,template,"R0-call:malformed-response",2,1
+spring-ai/test-model,"200 with a body that is not JSON",thermal-2005-1,template,"R0-call:malformed-response",2,1
+langchain4j/test-model,"503 on every attempt",thermal-2031-20,template,"R0-call:InternalServerException",1314,3
+langchain4j/test-model,"503 on every attempt",thermal-2019-13,template,"R0-call:InternalServerException",1273,3
+langchain4j/test-model,"503 on every attempt",tank-2007-16,template,"R0-call:InternalServerException",1436,3
+langchain4j/test-model,"503 on every attempt",thermal-2013-0,template,"R0-call:InternalServerException",1140,3
+langchain4j/test-model,"503 on every attempt",thermal-2005-1,template,"R0-call:InternalServerException",1047,3
+langchain4j/test-model,"429 Retry-After 60 s",thermal-2031-20,template,"R0-call:RateLimitException",2,1
+langchain4j/test-model,"429 Retry-After 60 s",thermal-2019-13,template,"R0-call:RateLimitException",2,1
+langchain4j/test-model,"429 Retry-After 60 s",tank-2007-16,template,"R0-call:RateLimitException",1,1
+langchain4j/test-model,"429 Retry-After 60 s",thermal-2013-0,template,"R0-call:RateLimitException",1,1
+langchain4j/test-model,"429 Retry-After 60 s",thermal-2005-1,template,"R0-call:RateLimitException",1,1
+langchain4j/test-model,"no response for 70 s",thermal-2031-20,template,"R0-call:no-response",10039,3
+langchain4j/test-model,"no response for 70 s",thermal-2019-13,template,"R0-call:no-response",10246,3
+langchain4j/test-model,"no response for 70 s",tank-2007-16,template,"R0-call:no-response",10229,3
+langchain4j/test-model,"no response for 70 s",thermal-2013-0,template,"R0-call:no-response",10072,3
+langchain4j/test-model,"no response for 70 s",thermal-2005-1,template,"R0-call:no-response",10297,3
+langchain4j/test-model,"200 with a body that is not JSON",thermal-2031-20,template,"R0-call:malformed-response",3,1
+langchain4j/test-model,"200 with a body that is not JSON",thermal-2019-13,template,"R0-call:malformed-response",2,1
+langchain4j/test-model,"200 with a body that is not JSON",tank-2007-16,template,"R0-call:malformed-response",3,1
+langchain4j/test-model,"200 with a body that is not JSON",thermal-2013-0,template,"R0-call:malformed-response",1,1
+langchain4j/test-model,"200 with a body that is not JSON",thermal-2005-1,template,"R0-call:malformed-response",2,1
