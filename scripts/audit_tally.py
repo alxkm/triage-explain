@@ -17,12 +17,12 @@ def count(g, col):
 F, U = "faithful (y/n)", "unsupported claim (y/n)"
 md = ["# Author's rating of accepted explanations (X1)", "",
       "Sample: 50 explanations accepted by rules R1-R6, 10 per model and framework, drawn with seed 20261006 by",
-      "`scripts/summarize.py`. Rated by the author, one rater. Notes in `audit_sheet.csv` are the rater's, in Russian.", "",
+      "`scripts/summarize.py`. Rated by the author, one rater; notes in `audit_sheet.csv` are the rater's (row numbers in them count data rows, header excluded).", "",
       "| Model / framework | Rated | Faithful | Unsupported claim |", "|---|---|---|---|"]
 for port, g in sorted(by.items()):
     md.append(f"| {port} | {len(g)} | {count(g, F)} | {count(g, U)} |")
 md.append(f"| **total** | {len(rows)} | {count(rows, F)} | {count(rows, U)} |")
-md += ["", "## Notes, grouped (English summary of the rater's notes)", "",
+md += ["", "## Notes, grouped", "",
        "- **Unfaithful (4, all qwen2.5:7b, two per framework):** three describe evidence of noise growth as a bias",
        "  (one adds \"drift or stuck value\"); one describes an abrupt step above the plausible rate as \"bias or drift\".",
        "- **Unsupported but faithful (1, qwen2.5:32b):** lists every instrument mechanism for a single abrupt step.",

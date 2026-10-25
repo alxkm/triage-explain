@@ -1,7 +1,7 @@
 # Author's rating of accepted explanations (X1)
 
 Sample: 50 explanations accepted by rules R1-R6, 10 per model and framework, drawn with seed 20261006 by
-`scripts/summarize.py`. Rated by the author, one rater. Notes in `audit_sheet.csv` are the rater's, in Russian.
+`scripts/summarize.py`. Rated by the author, one rater; notes in `audit_sheet.csv` are the rater's (row numbers in them count data rows, header excluded).
 
 | Model / framework | Rated | Faithful | Unsupported claim |
 |---|---|---|---|
@@ -12,7 +12,7 @@ Sample: 50 explanations accepted by rules R1-R6, 10 per model and framework, dra
 | spring-ai/qwen2.5:7b | 10 | 8 | 2 |
 | **total** | 50 | 46 | 5 |
 
-## Notes, grouped (English summary of the rater's notes)
+## Notes, grouped
 
 - **Unfaithful (4, all qwen2.5:7b, two per framework):** three describe evidence of noise growth as a bias
   (one adds "drift or stuck value"); one describes an abrupt step above the plausible rate as "bias or drift".

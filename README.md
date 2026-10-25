@@ -55,7 +55,7 @@ Runs append row by row and resume where they stopped. `INCIDENTS=incidents_dev` 
 - X2 was interrupted once when the model server stopped; the nine calls made while it was down were removed and
   repeated after a restart (`results/environment_X2.txt` lists both starts).
 - `results/audit_sheet.csv`: 50 accepted explanations (10 per model and framework), rated by the author for
-  faithfulness and unsupported claims, with the rater's notes (in Russian). Tally and an English summary of the
+  faithfulness and unsupported claims, with the rater's notes. Tally and a grouped summary of the
   notes: `results/audit_summary.md` (`python scripts/audit_tally.py`).
 - History of the runs: the first results (6 October 2026) used test incidents exported from telemetry-triage
   `6c3c65d`; they are kept in `results/archive_6c3c65d/`. On 18 October 2026 the test incidents were re-exported at
