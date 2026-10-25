@@ -1,6 +1,6 @@
 # triage-explain
 
-Code and results for the paper *Explaining Process Change, Instrument Fault and Data-Path Corruption to Operators: Local Language Models Grounded in Detector Decisions*.
+Code and results for the paper *Explaining Process, Instrument and Data-Path Causes in Plain Language: Local Language Models That Use Detector Decisions*.
 
 Deterministic detectors ([telemetry-triage](https://github.com/alxkm/telemetry-triage)) decide whether a departing
 reading reflects a **process** change, an **instrument** fault or **data-path** corruption. A local language model only
@@ -54,8 +54,9 @@ Runs append row by row and resume where they stopped. `INCIDENTS=incidents_dev` 
   `docs/DEVELOPMENT.md`. The 260 test incidents (seeds 2000–2049, 20 per fault type) were run after that.
 - X2 was interrupted once when the model server stopped; the nine calls made while it was down were removed and
   repeated after a restart (`results/environment_X2.txt` lists both starts).
-- `results/audit_sheet.csv`: 50 accepted explanations (10 per model and framework) for a human rating of
-  faithfulness, not yet filled in.
+- `results/audit_sheet.csv`: 50 accepted explanations (10 per model and framework), rated by the author for
+  faithfulness and unsupported claims, with the rater's notes (in Russian). Tally and an English summary of the
+  notes: `results/audit_summary.md` (`python scripts/audit_tally.py`).
 - History of the runs: the first results (6 October 2026) used test incidents exported from telemetry-triage
   `6c3c65d`; they are kept in `results/archive_6c3c65d/`. On 18 October 2026 the test incidents were re-exported at
   `3246e44` and X1–X3 re-run. In that re-run, llama3.2, qwen2.5:7b and mistral:7b were at first absent from the
